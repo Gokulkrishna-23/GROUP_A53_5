@@ -1,0 +1,18 @@
+function addToDisplay(value) {
+  document.getElementById("result").value += value;
+}
+
+function backspace() {
+  let result = document.getElementById("result").value;
+  document.getElementById("result").value = result.substring(0, result.length - 1);
+}
+
+function clearDisplay() {
+  document.getElementById("result").value = "0";
+}
+
+function calculate() {
+  let result = document.getElementById("result").value;
+  let answer = eval(result);
+  document.getElementById("result").value = answer;
+}
